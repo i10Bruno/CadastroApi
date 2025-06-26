@@ -1,6 +1,9 @@
-package dev.cadastro.CadastroDeClientes;
+package dev.cadastro.CadastroDeClientes.Clientes.controller.service;
 
+import dev.cadastro.CadastroDeClientes.Tarefas.TarefasModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -11,6 +14,14 @@ public class ClienteModel {
     private String Nome;
     private   String Email;
     private int idade;
+    //sprivate List<TarefasModel> tarefas;
+
+
+
+    //um cliente so tem uma unica tarefa @ManyToOne
+    @ManyToOne()
+    @JoinColumn(name = "tarefas_id")
+   private TarefasModel tarefas;
 
     public ClienteModel(){
 
