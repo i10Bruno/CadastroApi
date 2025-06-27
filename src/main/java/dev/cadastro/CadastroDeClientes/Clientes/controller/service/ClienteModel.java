@@ -16,13 +16,23 @@ import java.util.List;
 public class ClienteModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+
+    @Column(name = "idgit")
     private long id;
+
+
+    @Column(name = "nome")
     private String Nome;
 
     @Column(unique = true)
     private String Email;
+
+    @Column(name = "img_url")
+    private String imgurl;
+    @Column(name = "idade")
     private int idade;
-    //sprivate List<TarefasModel> tarefas;
+
 
 
     //um cliente so tem uma unica tarefa @ManyToOne
