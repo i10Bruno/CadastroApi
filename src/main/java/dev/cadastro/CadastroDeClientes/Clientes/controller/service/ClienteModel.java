@@ -18,7 +18,7 @@ public class ClienteModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
 
-    @Column(name = "idgit")
+    @Column(name = "id")
     private long id;
 
 
