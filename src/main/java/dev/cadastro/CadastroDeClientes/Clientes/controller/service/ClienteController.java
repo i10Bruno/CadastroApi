@@ -41,11 +41,14 @@ public class ClienteController {
 
 
     //mostrar por id (READ)
-    @GetMapping("/todosid")
 
-    public String mostrarTodosOsClientesId(){
 
-        return "clientes id";
+
+    @GetMapping("/listar/{id}")
+
+    public  ClienteModel lisporid(@PathVariable long id){
+
+        return clienteService.listarClientePorId(id);
     }
 
     //ALTERAR(UPDATE)

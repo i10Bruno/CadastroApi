@@ -3,6 +3,7 @@ package dev.cadastro.CadastroDeClientes.Clientes.controller.service;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClienteService {
@@ -19,5 +20,10 @@ public class ClienteService {
         return clienteRepository.findAll();
     }
 
+    public ClienteModel listarClientePorId( long id){
+        Optional<ClienteModel> ClientePorId= clienteRepository.findById(id);
 
+        return ClientePorId.orElse(null);
+
+    }
 }
