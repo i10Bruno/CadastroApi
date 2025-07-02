@@ -1,6 +1,7 @@
 package dev.cadastro.CadastroDeClientes.Tarefas;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.cadastro.CadastroDeClientes.Clientes.controller.service.ClienteModel;
 import jakarta.persistence.*;
 
@@ -22,6 +23,7 @@ public class TarefasModel {
 
     //uma tarefa para varios clientes
     @OneToMany(mappedBy = "tarefas")
+    @JsonIgnore
     private List<ClienteModel> cliente;
 
 }

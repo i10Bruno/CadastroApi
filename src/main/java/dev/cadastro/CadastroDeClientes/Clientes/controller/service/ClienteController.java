@@ -1,10 +1,19 @@
 package dev.cadastro.CadastroDeClientes.Clientes.controller.service;
 
+
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
 @RequestMapping
 public class ClienteController {
+
+
+    private ClienteService clienteService;
+
+    public ClienteController(ClienteService clienteService) {
+        this.clienteService = clienteService;
+    }
 
     @GetMapping("/teste")
     public  String teste(){
@@ -25,9 +34,9 @@ public class ClienteController {
     //mostrar todos (read)
     @GetMapping("/todos")
 
-    public String mostrarTodosOsClientes(){
+    public List<ClienteModel> listarclientes(){
 
-        return "clientes";
+        return clienteService.listarclientes();
     }
 
 
