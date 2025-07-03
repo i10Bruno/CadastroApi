@@ -26,9 +26,9 @@ public class ClienteController {
 
     @PostMapping("/criar")
 
-    public String criarCliente(){
+    public ClienteModel criarCliente(@RequestBody ClienteModel cliente){
 
-        return "Clientecriado";
+        return clienteService.criarCliente(cliente) ;
     }
 
     //mostrar todos (read)
@@ -41,9 +41,6 @@ public class ClienteController {
 
 
     //mostrar por id (READ)
-
-
-
     @GetMapping("/listar/{id}")
 
     public  ClienteModel lisporid(@PathVariable long id){
