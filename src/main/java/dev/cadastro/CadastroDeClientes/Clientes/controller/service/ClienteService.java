@@ -34,4 +34,10 @@ public class ClienteService {
         return clienteRepository.save(cliente);
     }
 
+    public void deletarporid(long id){
+
+        clienteRepository.deleteById(id);
+    }
+
+
 }

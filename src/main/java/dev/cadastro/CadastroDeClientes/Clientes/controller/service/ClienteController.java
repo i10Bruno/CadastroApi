@@ -56,10 +56,10 @@ public class ClienteController {
     }
 
     //DELETAR(DELETE)
-    @DeleteMapping("/deletarId")
-    public String deletarClienteid(){
+    @DeleteMapping("/deletar{id}")
+    public void deletarClienteid(@PathVariable long id){
 
-        return "deletado";
+        clienteService.deletarporid(id);
     }
 
 
