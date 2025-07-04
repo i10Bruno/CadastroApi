@@ -49,10 +49,10 @@ public class ClienteController {
     }
 
     //ALTERAR(UPDATE)
-    @PutMapping("/alterar")
-    public String alterarClientes(){
+    @PutMapping("/alterar/{id}")
+    public ClienteModel alterarClientes(@PathVariable Long id,@RequestBody ClienteModel clienteAtualizado){
 
-        return "alteração";
+        return clienteService.atualizarCliente(id,clienteAtualizado);
     }
 
     //DELETAR(DELETE)

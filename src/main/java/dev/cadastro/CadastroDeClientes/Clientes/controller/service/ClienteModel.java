@@ -40,4 +40,52 @@ public class ClienteModel {
     @JoinColumn(name = "tarefas_id")
     private TarefasModel tarefas;
 
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return Nome;
+    }
+
+    public void setNome(String nome) {
+        Nome = nome;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getImgurl() {
+        return imgurl;
+    }
+
+    public void setImgurl(String imgurl) {
+        this.imgurl = imgurl;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public TarefasModel getTarefas() {
+        return tarefas;
+    }
+
+    public void setTarefas(TarefasModel tarefas) {
+        this.tarefas = tarefas;
+    }
 }
